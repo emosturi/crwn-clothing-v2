@@ -1,25 +1,14 @@
-<<<<<<< HEAD
 import styled from 'styled-components'
-=======
-import styled from 'styled-components';
->>>>>>> lesson-34
 
 export const BackgroundImage = styled.div`
   width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
-<<<<<<< HEAD
   background-image: ${({ imageUrl })=>`url(${imageUrl})`}
 `
 
 export const DirectoryItemBody = styled.div`
-=======
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-`;
-
-export const Body = styled.div`
->>>>>>> lesson-34
   height: 90px;
   padding: 0 25px;
   display: flex;
@@ -43,11 +32,7 @@ export const Body = styled.div`
     font-weight: lighter;
     font-size: 16px;
   }
-<<<<<<< HEAD
 `
-=======
-`;
->>>>>>> lesson-34
 
 export const DirectoryItemContainer = styled.div`
   min-width: 30%;
@@ -60,30 +45,14 @@ export const DirectoryItemContainer = styled.div`
   margin: 0 7.5px 15px;
   overflow: hidden;
 
-<<<<<<< HEAD
   &:hover {
     cursor: pointer;
 
     & ${BackgroundImage} {
-=======
-  &:first-child {
-    margin-right: 7.5px;
-  }
-
-  &:last-child {
-    margin-left: 7.5px;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    ${BackgroundImage} {
->>>>>>> lesson-34
       transform: scale(1.1);
       transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
-<<<<<<< HEAD
     & ${DirectoryItemBody} {
       opacity: 0.9;
     }
@@ -101,10 +70,3 @@ export const DirectoryItemContainer = styled.div`
     margin-left: 7.5px;
   }
 `
-=======
-    ${Body} {
-      opacity: 0.9;
-    }
-  }
-`;
->>>>>>> lesson-34
