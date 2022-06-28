@@ -4,12 +4,7 @@ import { useDispatch } from 'react-redux';
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import {
-  signInAuthUserWithEmailAndPassword,
-  signInWithGooglePopup,
-} from '../../utils/firebase/firebase.utils';
-
-import { googleSignInStart } from '../../store/user/user.action';
+import { googleSignInStart, emailSignInStart } from '../../store/user/user.action';
 
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
 
@@ -35,7 +30,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      await signInAuthUserWithEmailAndPassword(email, password);
+      dispatch(emailSignInStart(email, password))
       resetFormFields();
     } catch (error) {
       console.log('user sign in failed', error);
